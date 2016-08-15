@@ -1,0 +1,31 @@
+{
+    "name": "jim-moser/zf2-validators-empty-or-plugin",
+    "description": "Validator plugin manager configuration for jim-moser/zf2-validators-empty-or.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "validator",
+        "validation",
+        "zf2",
+        "module"
+    ],
+    "homepage": "https://github.com/jim-moser/zf2-validators-empty-or-plugin",
+    "authors": [
+        {
+            "name": "Jim Moser",
+            "email": "jmoser@epicride.info",
+            "homepage": "http://epicride.info/jmoser/zendframework"
+        }
+    ],
+    "repositories": 
+    [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jim-moser/zf2-validators-empty-or"
+        }
+    ],
+    "require": {
+    	"jim-moser/zf2-validators-empty-or": "@dev",
+    	"zendframework/zendframework": "2.*"
+    }
+}
