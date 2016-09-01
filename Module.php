@@ -4,6 +4,26 @@ namespace JimMoser\Validator;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
+/**
+ * Zend Framework 2 Module class for JimMoser\Validator module.
+ * 
+ * This class and the configuration files it references serve two purposes.
+ * 1. It provides configuration to Zend\Validator\ValidatorPluginManager to 
+ *    register the validators provided in the jim-moser\zf2-validators-empty-or
+ *    package.
+ * 2. It provides configuration to Zend\Loader\ClassMapAutoloader for 
+ *    autoloading the classes in the jim-moser\zf2-validators-empty-or package. 
+ *    This is only needed and used if Composer autoloading is not being used.
+ *
+ * @author    Jim Moser <jmoser@epicride.info>
+ * @link      http://github.com/jim-moser/zf2-validators-empty-or-plugin for 
+ *            source repository.
+ * @copyright Copyright (c) July 9, 2016 Jim Moser
+ * @license   LICENSE.txt at http://github.com/
+ *            jim-moser/zf2-validators-empty-or-plugin  
+ *            New BSD License
+ *
+ */
 class Module implements AutoloaderProviderInterface,
                         ConfigProviderInterface
 {
@@ -13,18 +33,21 @@ class Module implements AutoloaderProviderInterface,
     public function getAutoloaderConfig()
     {
         return array(
-            /*
+            // ClassMapAutoLoader used if Composer autoloading not used.
             'Zend\Loader\ClassMapAutoloader' => array(
-                __DIR__ . '/autoload_classmap.php',
+                dirname(__DIR__) . 
+                            '/zf2-validators-empty-or/autoload_classmap.php',
             ),
-            */
+            
+            // StandardAutoLoader used if Composer autoloading not used.
+            /*
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-                    //To do. Use ClassMapAutoloader instead.
-                    __NAMESPACE__ => __DIR__ . '/src',
-                    __NAMESPACE__ . 'Test' => __DIR__ . '/test',
+                    __NAMESPACE__ => dirname(__DIR__) . 
+                                                '/zf2-validators-empty-or/src',
                 ),
             ),
+            */
         );
     }
     
