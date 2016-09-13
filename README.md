@@ -111,24 +111,24 @@ Move unpacked contents into the vendor/ZF2 directory.
 	jim-moser/zf2-validators-empty-or package without Composer autoloading.
 	The Zend Framework module manager needs to be made aware that this package 
 	is a Zend Framework module for the Zend autoloader to receive this 
-	configuration. Follow the instructions in the section below to notify the 
-	module manager of this module.
+	configuration. Follow the instructions in the [Module Manager Configuration](#module_manager) 
+	section below to notify the module manager of this module.
 
 5. Setup unit testing.
 	
 	The phpunit.xml file in the jim-moser\validators-empty-or-test package 
 	depends on Composer autoloading which is not being used here. In order to 
 	use the autoloading setup in the module file, rename the 
-	phpunit.xml.no_composer.dist file to phpunit.xml.
+	phpunit.xml.no\_composer.dist file to phpunit.xml.
 	
-###Configuring the Validator Plugin Manager
+###<a name="module_manager"></a>Module Manager Configuration
 
 The Zend Framework module manager needs to be made aware that this package is a 
 Zend Framework module in order for the validator plugin manager to receive the 
 configuration from this package. This is accomplished by adding the module name 
-to the ['modules'] array and the module name and path to the 
-['module_listener_options']['module_paths'] array of the array returned by the 
-application's config/application.config.php file.
+to the \['modules'\] array and the module name and path to the 
+\['module\_listener\_options'\]\['module\_paths'\] array of the array returned 
+by the application's config/application.config.php file.
 
 	<?php
 	// config/application.config.php
