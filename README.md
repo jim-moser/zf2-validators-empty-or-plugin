@@ -38,7 +38,7 @@ Related packages:
 	
 A brief description of the related packages listed above can be found in the 
 README.md file for the jim-moser/zf2-validators-empty-or package available at 
-[Github] (https://github.com/jim-moser/zf2-validators-emtpy-or/README.md). 
+[Github] (https://github.com/jim-moser/zf2-validators-empty-or/README.md). 
 
 #Installation
 
