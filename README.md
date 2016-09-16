@@ -31,14 +31,15 @@ installs all of Zend Framework 2.
 
 Related packages:
 
-* jim-moser/zf2-validators-empty-or
-* jim-moser/zf2-validators-empty-or-test
-* jim-moser/zf2-validators-empty-or-plugin
-* jim-moser/zf2-validators-empty-or-plugin-test
+* [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/)
+* [jim-moser/zf2-validators-empty-or-test](https://github.com/jim-moser/zf2-validators-empty-or-test/)
+* [jim-moser/zf2-validators-empty-or-plugin](https://github.com/jim-moser/zf2-validators-empty-or-plugin/)
+* [jim-moser/zf2-validators-empty-or-plugin-test](https://github.com/jim-moser/zf2-validators-empty-or-plugin-test/)
 	
 A brief description of the related packages listed above can be found in the 
-README.md file for the jim-moser/zf2-validators-empty-or package available at 
-[Github] (https://github.com/jim-moser/zf2-validators-empty-or/). 
+README.md file for the 
+[jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/) 
+package.
 
 #Installation
 
