@@ -1,11 +1,15 @@
 <?php
+use JimMoser\Validator\EmptyValidator;
+use JimMoser\Validator\OrChain;
+use JimMoser\Validator\VerboseOrChain;
+
 return array(
-    // For use by Zend\Validator\ValidatorPluginManager.
+    // For use by Laminas\Validator\ValidatorPluginManager.
     'validators' => array(
     	'invokables' => array(
-	    	'EmptyValidator' => 'JimMoser\Validator\EmptyValidator',
-            'OrChain' => 'JimMoser\Validator\OrChain',
-            'VerboseOrChain' => 'JimMoser\Validator\VerboseOrChain',
+	    	'EmptyValidator' => EmptyValidator::class,
+            'OrChain' => OrChain::class,
+            'VerboseOrChain' => VerboseOrChain::class,
     	),
     ),
     'shared' => array(

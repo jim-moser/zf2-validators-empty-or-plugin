@@ -1,1 +1,3 @@
-/vendor
+/dev/
+/vendor/
+/composer.lock

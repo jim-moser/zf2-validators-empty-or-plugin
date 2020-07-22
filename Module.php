@@ -1,17 +1,17 @@
 <?php
 namespace JimMoser\Validator;
 
-use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Laminas\ModuleManager\Feature\AutoloaderProviderInterface;
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
- * Zend Framework 2 Module class for JimMoser\Validator module.
+ * Laminas 2 Module class for JimMoser\Validator module.
  * 
  * This class and the configuration files it references serve two purposes.
- * 1. It provides configuration to Zend\Validator\ValidatorPluginManager to 
+ * 1. It provides configuration to Laminas\Validator\ValidatorPluginManager to 
  *    register the validators provided in the jim-moser\zf2-validators-empty-or
  *    package.
- * 2. It provides configuration to Zend\Loader\ClassMapAutoloader for 
+ * 2. It provides configuration to Laminas\Loader\ClassMapAutoloader for 
  *    autoloading the classes in the jim-moser\zf2-validators-empty-or package. 
  *    This is only needed and used if Composer autoloading is not being used.
  *
@@ -34,14 +34,14 @@ class Module implements AutoloaderProviderInterface,
     {
         return array(
             // ClassMapAutoLoader used if Composer autoloading not used.
-            'Zend\Loader\ClassMapAutoloader' => array(
+            'Laminas\Loader\ClassMapAutoloader' => array(
                 dirname(__DIR__) . 
                             '/zf2-validators-empty-or/autoload_classmap.php',
             ),
             
             // StandardAutoLoader used if Composer autoloading not used.
             /*
-            'Zend\Loader\StandardAutoloader' => array(
+            'Laminas\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
                     __NAMESPACE__ => dirname(__DIR__) . 
                                                 '/zf2-validators-empty-or/src',
