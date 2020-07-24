@@ -16,20 +16,6 @@ This package was split from the jim-moser/zf2-validators-empty-or package in
 order to reduce that package's dependencies to the minimum required to use the 
 provided validators.
 
-This package depends directly on the laminas/laminas-modulemanager package in 
-addition to the jim-moser/zf2-validators-empty-or package.
-		
-(The following paragraph is no longer accurate and needs to be updated.)
-The code provided by this package only depends directly on code and classes 
-provided by the jim-moser/zf2-validators-empty-or package and its' dependencies, 
-and the laminas/laminas-modulemanager package. However it appears that the code 
-within laminas-modulemanager and/or its' dependencies has many dependencies on code and 
-classes within various laminas packages not specified as dependencies 
-within the composer.json files of laminas-modulemanager and its' dependencies. To prevent 
-this issue from causing problems, the jim-moser/zf2-validators-empty-or-plugin 
-package was given a dependency on the zendframework/zendframework package which 
-installs all of Laminas Framework 2.
-
 Related packages:
 
 * [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/)
@@ -41,6 +27,25 @@ A brief description of the related packages listed above can be found in the
 README.md file for the 
 [jim-moser/zf2-validators-empty-or](https://github.com/jim-moser/zf2-validators-empty-or/) 
 package.
+
+#Dependencies 
+
+The code in this package depends directly on code and classes from the following 
+packages:
+	jim-moser/zf2-validators-empty-or
+	laminas/laminas-modulemanager 
+		
+However it appears that the code within laminas-modulemanager and/or its' 
+dependencies has several dependencies on code and classes within various Laminas 
+packages not specified as dependencies within the composer.json files of 
+laminas-modulemanager and its' dependencies. To prevent this issue from causing 
+problems, these missing dependencies have been added to the composer.json file 
+of this package. The additional dependencies added under the "requires" section 
+of the composer.json file are:
+	laminas/laminas-console
+	laminas/laminas-loader
+	laminas/laminas-mvc
+	laminas/laminas-servicemanager
 
 #Installation
 
